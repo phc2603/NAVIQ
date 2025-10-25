@@ -44,10 +44,12 @@ class Joystick:
 
     #get the coordinate positions in the circle
     def get_angular_vel(self):
+        pygame.event.pump()
         if not self.is_speeding():
             return {
                 "x": 0,
-                "y": 0
+                "y": 0,
+                'debug': "NOT SPEEDING"
             }
         x_axis = self.__joy.get_axis(LEFT_ANALOG_X_AXIS_BUTTON_INDEX)
         y_axis = self.__joy.get_axis(LEFT_ANALOG_Y_AXIS_BUTTON_INDEX)
@@ -58,9 +60,11 @@ class Joystick:
 
     #return if the speed button is active
     def is_speeding(self):
+        pygame.event.pump()
         return self.__joy.get_button(RB_ACELLERATOR_BUTTON_INDEX)
 
     def set_mode(self, mode_label):
+        pygame.event.pump()
         if self.__joy.get_button(0):
             self.mode = "Normal"
         elif self.__joy.get_button(1):
@@ -77,5 +81,4 @@ class Joystick:
     def quit_joystick(self):
         self.__joy.quit()
         pygame.quit()
-
 
