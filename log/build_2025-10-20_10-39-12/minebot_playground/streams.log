@@ -1,0 +1,20 @@
+[1.410s] Invoking command in '/home/phc2603/ros/build/minebot_playground': PYTHONPATH=/home/phc2603/ros/build/minebot_playground/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/phc2603/ros/build/minebot_playground/build --no-deps symlink_data
+[1.764s] running develop
+[1.995s] running egg_info
+[2.021s] writing minebot_playground.egg-info/PKG-INFO
+[2.022s] writing dependency_links to minebot_playground.egg-info/dependency_links.txt
+[2.023s] writing entry points to minebot_playground.egg-info/entry_points.txt
+[2.024s] writing requirements to minebot_playground.egg-info/requires.txt
+[2.025s] writing top-level names to minebot_playground.egg-info/top_level.txt
+[2.072s] reading manifest file 'minebot_playground.egg-info/SOURCES.txt'
+[2.074s] writing manifest file 'minebot_playground.egg-info/SOURCES.txt'
+[2.098s] running build_ext
+[2.098s] Creating /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot-playground.egg-link (link to .)
+[2.100s] Installing control_auto script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+[2.101s] Installing gas_mock_pub script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+[2.102s] Installing usbcam_node script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+[2.102s] Installing user_controller script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+[2.103s] 
+[2.103s] Installed /home/phc2603/ros/build/minebot_playground
+[2.104s] running symlink_data
+[2.201s] Invoked command in '/home/phc2603/ros/build/minebot_playground' returned '0': PYTHONPATH=/home/phc2603/ros/build/minebot_playground/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/phc2603/ros/build/minebot_playground/build --no-deps symlink_data

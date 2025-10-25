@@ -1,0 +1,11 @@
+package.xml
+setup.cfg
+setup.py
+initials_ros.egg-info/PKG-INFO
+initials_ros.egg-info/SOURCES.txt
+initials_ros.egg-info/dependency_links.txt
+initials_ros.egg-info/entry_points.txt
+initials_ros.egg-info/requires.txt
+initials_ros.egg-info/top_level.txt
+initials_ros.egg-info/zip-safe
+resource/initials_ros

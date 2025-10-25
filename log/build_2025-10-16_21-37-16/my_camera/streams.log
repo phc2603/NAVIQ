@@ -1,0 +1,19 @@
+[2.716s] Invoking command in '/home/phc2603/ros/build/my_camera': PYTHONPATH=/home/phc2603/ros/build/my_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/phc2603/ros/install/my_camera/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/phc2603/ros/build/my_camera/build --no-deps symlink_data
+[3.397s] running develop
+[3.879s] running egg_info
+[3.915s] writing my_camera.egg-info/PKG-INFO
+[3.916s] writing dependency_links to my_camera.egg-info/dependency_links.txt
+[3.917s] writing entry points to my_camera.egg-info/entry_points.txt
+[3.918s] writing requirements to my_camera.egg-info/requires.txt
+[3.918s] writing top-level names to my_camera.egg-info/top_level.txt
+[4.010s] reading manifest file 'my_camera.egg-info/SOURCES.txt'
+[4.011s] writing manifest file 'my_camera.egg-info/SOURCES.txt'
+[4.056s] running build_ext
+[4.057s] Creating /home/phc2603/ros/install/my_camera/lib/python3.12/site-packages/my-camera.egg-link (link to .)
+[4.060s] Installing ip_stream_node script to /home/phc2603/ros/install/my_camera/lib/my_camera
+[4.061s] Installing usbcam_node script to /home/phc2603/ros/install/my_camera/lib/my_camera
+[4.062s] Installing webcam_node script to /home/phc2603/ros/install/my_camera/lib/my_camera
+[4.063s] 
+[4.063s] Installed /home/phc2603/ros/build/my_camera
+[4.064s] running symlink_data
+[4.176s] Invoked command in '/home/phc2603/ros/build/my_camera' returned '0': PYTHONPATH=/home/phc2603/ros/build/my_camera/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/phc2603/ros/install/my_camera/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/phc2603/ros/build/my_camera/build --no-deps symlink_data

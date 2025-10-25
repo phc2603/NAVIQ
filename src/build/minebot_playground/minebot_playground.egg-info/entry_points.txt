@@ -1,0 +1,5 @@
+[console_scripts]
+control_auto = minebot_playground.control_auto:main
+gas_mock_pub = minebot_playground.gas_mock:main
+usbcam_node = minebot_playground.usbcam_node:main
+user_controller = minebot_playground.user_controller:main

@@ -1,0 +1,2 @@
+Invoking command in '/home/phc2603/ros/build/initials_ros': /usr/bin/cmake /home/phc2603/ros/src/initials_ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/phc2603/ros/install/initials_ros
+Invoked command in '/home/phc2603/ros/build/initials_ros' returned '1': /usr/bin/cmake /home/phc2603/ros/src/initials_ros -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCATKIN_SYMLINK_INSTALL=ON -DCMAKE_INSTALL_PREFIX=/home/phc2603/ros/install/initials_ros

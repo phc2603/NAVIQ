@@ -1,0 +1,17 @@
+[1.863s] Invoking command in '/home/phc2603/ros/build/initials_ros': PYTHONPATH=/home/phc2603/ros/build/initials_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/phc2603/ros/install/initials_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/phc2603/ros/build/initials_ros/build --no-deps symlink_data
+[2.257s] running develop
+[2.533s] running egg_info
+[2.557s] writing initials_ros.egg-info/PKG-INFO
+[2.559s] writing dependency_links to initials_ros.egg-info/dependency_links.txt
+[2.559s] writing entry points to initials_ros.egg-info/entry_points.txt
+[2.560s] writing requirements to initials_ros.egg-info/requires.txt
+[2.561s] writing top-level names to initials_ros.egg-info/top_level.txt
+[2.584s] reading manifest file 'initials_ros.egg-info/SOURCES.txt'
+[2.587s] writing manifest file 'initials_ros.egg-info/SOURCES.txt'
+[2.624s] running build_ext
+[2.647s] Creating /home/phc2603/ros/install/initials_ros/lib/python3.12/site-packages/initials-ros.egg-link (link to .)
+[2.650s] Installing talker script to /home/phc2603/ros/install/initials_ros/lib/initials_ros
+[2.651s] 
+[2.651s] Installed /home/phc2603/ros/build/initials_ros
+[2.651s] running symlink_data
+[2.783s] Invoked command in '/home/phc2603/ros/build/initials_ros' returned '0': PYTHONPATH=/home/phc2603/ros/build/initials_ros/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/phc2603/ros/install/initials_ros/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/phc2603/ros/build/initials_ros/build --no-deps symlink_data

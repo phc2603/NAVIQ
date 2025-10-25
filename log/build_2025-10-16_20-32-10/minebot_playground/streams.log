@@ -1,0 +1,30 @@
+[1.729s] Invoking command in '/home/phc2603/ros/src/minebot_playground': PYTHONPATH=/home/phc2603/ros/build/minebot_playground/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/minebot_playground build --build-base /home/phc2603/ros/build/minebot_playground/build install --record /home/phc2603/ros/build/minebot_playground/install.log --single-version-externally-managed install_data
+[2.222s] running egg_info
+[2.259s] writing ../../build/minebot_playground/minebot_playground.egg-info/PKG-INFO
+[2.260s] writing dependency_links to ../../build/minebot_playground/minebot_playground.egg-info/dependency_links.txt
+[2.261s] writing entry points to ../../build/minebot_playground/minebot_playground.egg-info/entry_points.txt
+[2.262s] writing requirements to ../../build/minebot_playground/minebot_playground.egg-info/requires.txt
+[2.262s] writing top-level names to ../../build/minebot_playground/minebot_playground.egg-info/top_level.txt
+[2.346s] reading manifest file '../../build/minebot_playground/minebot_playground.egg-info/SOURCES.txt'
+[2.347s] writing manifest file '../../build/minebot_playground/minebot_playground.egg-info/SOURCES.txt'
+[2.347s] running build
+[2.348s] running build_py
+[2.349s] copying minebot_playground/usbcam_node.py -> /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground
+[2.352s] running install
+[2.362s] running install_lib
+[2.400s] copying /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground/usbcam_node.py -> /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground
+[2.403s] byte-compiling /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground/usbcam_node.py to usbcam_node.cpython-312.pyc
+[2.408s] running install_data
+[2.408s] running install_egg_info
+[2.446s] removing '/home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground-0.0.0-py3.12.egg-info' (and everything under it)
+[2.448s] Copying ../../build/minebot_playground/minebot_playground.egg-info to /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground-0.0.0-py3.12.egg-info
+[2.451s] running install_scripts
+[2.711s] Installing camera_pub script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+[2.713s] Installing control_auto script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+[2.713s] Installing gas_mock_pub script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+[2.714s] Installing ip_stream_node script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+[2.715s] Installing usbcam_node script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+[2.716s] Installing user_controller script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+[2.717s] Installing webcam_node script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+[2.718s] writing list of installed files to '/home/phc2603/ros/build/minebot_playground/install.log'
+[2.781s] Invoked command in '/home/phc2603/ros/src/minebot_playground' returned '0': PYTHONPATH=/home/phc2603/ros/build/minebot_playground/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/minebot_playground build --build-base /home/phc2603/ros/build/minebot_playground/build install --record /home/phc2603/ros/build/minebot_playground/install.log --single-version-externally-managed install_data

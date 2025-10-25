@@ -1,0 +1,174 @@
+[0.644s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--packages-select', 'minebot_playground']
+[0.644s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=['minebot_playground'], packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7facc0155520>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7facc01548f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7facc01548f0>>, mixin_verb=('build',))
+[0.743s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.743s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.743s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.743s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.743s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.743s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.744s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/phc2603/ros'
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.744s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.745s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.745s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.745s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.796s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.796s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.796s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.797s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.797s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.797s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.797s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.797s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(my_camera) by extensions ['ignore', 'ignore_ament_install']
+[0.798s] Level 1:colcon.colcon_core.package_identification:_identify(my_camera) by extension 'ignore'
+[0.799s] Level 1:colcon.colcon_core.package_identification:_identify(my_camera) by extension 'ignore_ament_install'
+[0.799s] Level 1:colcon.colcon_core.package_identification:_identify(my_camera) by extensions ['colcon_pkg']
+[0.799s] Level 1:colcon.colcon_core.package_identification:_identify(my_camera) by extension 'colcon_pkg'
+[0.799s] Level 1:colcon.colcon_core.package_identification:_identify(my_camera) by extensions ['colcon_meta']
+[0.799s] Level 1:colcon.colcon_core.package_identification:_identify(my_camera) by extension 'colcon_meta'
+[0.799s] Level 1:colcon.colcon_core.package_identification:_identify(my_camera) by extensions ['ros']
+[0.799s] Level 1:colcon.colcon_core.package_identification:_identify(my_camera) by extension 'ros'
+[0.803s] DEBUG:colcon.colcon_core.package_identification:Package 'my_camera' with type 'ros.ament_python' and name 'my_camera'
+[0.803s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.803s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.803s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.804s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extensions ['ignore', 'ignore_ament_install']
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) by extension 'ignore'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/build) ignored
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/initials_ros) by extensions ['ignore', 'ignore_ament_install']
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/initials_ros) by extension 'ignore'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/initials_ros) by extension 'ignore_ament_install'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/initials_ros) by extensions ['colcon_pkg']
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/initials_ros) by extension 'colcon_pkg'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/initials_ros) by extensions ['colcon_meta']
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/initials_ros) by extension 'colcon_meta'
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/initials_ros) by extensions ['ros']
+[0.805s] Level 1:colcon.colcon_core.package_identification:_identify(src/initials_ros) by extension 'ros'
+[0.806s] DEBUG:colcon.colcon_core.package_identification:Package 'src/initials_ros' with type 'ros.ament_python' and name 'initials_ros'
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extensions ['ignore', 'ignore_ament_install']
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) by extension 'ignore'
+[0.806s] Level 1:colcon.colcon_core.package_identification:_identify(src/install) ignored
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extensions ['ignore', 'ignore_ament_install']
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) by extension 'ignore'
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(src/log) ignored
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(src/minebot_playground) by extensions ['ignore', 'ignore_ament_install']
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(src/minebot_playground) by extension 'ignore'
+[0.807s] Level 1:colcon.colcon_core.package_identification:_identify(src/minebot_playground) by extension 'ignore_ament_install'
+[0.808s] Level 1:colcon.colcon_core.package_identification:_identify(src/minebot_playground) by extensions ['colcon_pkg']
+[0.808s] Level 1:colcon.colcon_core.package_identification:_identify(src/minebot_playground) by extension 'colcon_pkg'
+[0.808s] Level 1:colcon.colcon_core.package_identification:_identify(src/minebot_playground) by extensions ['colcon_meta']
+[0.808s] Level 1:colcon.colcon_core.package_identification:_identify(src/minebot_playground) by extension 'colcon_meta'
+[0.808s] Level 1:colcon.colcon_core.package_identification:_identify(src/minebot_playground) by extensions ['ros']
+[0.808s] Level 1:colcon.colcon_core.package_identification:_identify(src/minebot_playground) by extension 'ros'
+[0.809s] DEBUG:colcon.colcon_core.package_identification:Package 'src/minebot_playground' with type 'ros.ament_python' and name 'minebot_playground'
+[0.809s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extensions ['ignore', 'ignore_ament_install']
+[0.809s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extension 'ignore'
+[0.809s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extension 'ignore_ament_install'
+[0.809s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extensions ['colcon_pkg']
+[0.810s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extension 'colcon_pkg'
+[0.810s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extensions ['colcon_meta']
+[0.810s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extension 'colcon_meta'
+[0.810s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extensions ['ros']
+[0.810s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extension 'ros'
+[0.810s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extensions ['cmake', 'python']
+[0.810s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extension 'cmake'
+[0.810s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extension 'python'
+[0.810s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extensions ['python_setup_py']
+[0.810s] Level 1:colcon.colcon_core.package_identification:_identify(~) by extension 'python_setup_py'
+[0.810s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.810s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.810s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.810s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.810s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.849s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'initials_ros' in 'src/initials_ros'
+[0.849s] INFO:colcon.colcon_core.package_selection:Skipping not selected package 'my_camera' in 'my_camera'
+[0.850s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.850s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.853s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 3 installed packages in /home/phc2603/ros/install
+[0.856s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 288 installed packages in /opt/ros/jazzy
+[0.858s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.945s] Level 5:colcon.colcon_core.verb:set package 'minebot_playground' build argument 'cmake_args' from command line to 'None'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'minebot_playground' build argument 'cmake_target' from command line to 'None'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'minebot_playground' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'minebot_playground' build argument 'cmake_clean_cache' from command line to 'False'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'minebot_playground' build argument 'cmake_clean_first' from command line to 'False'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'minebot_playground' build argument 'cmake_force_configure' from command line to 'False'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'minebot_playground' build argument 'ament_cmake_args' from command line to 'None'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'minebot_playground' build argument 'catkin_cmake_args' from command line to 'None'
+[0.946s] Level 5:colcon.colcon_core.verb:set package 'minebot_playground' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.946s] DEBUG:colcon.colcon_core.verb:Building package 'minebot_playground' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/phc2603/ros/build/minebot_playground', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/phc2603/ros/install/minebot_playground', 'merge_install': False, 'path': '/home/phc2603/ros/src/minebot_playground', 'symlink_install': False, 'test_result_base': None}
+[0.946s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.949s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.950s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/phc2603/ros/src/minebot_playground' with build type 'ament_python'
+[0.950s] Level 1:colcon.colcon_core.shell:create_environment_hook('minebot_playground', 'ament_prefix_path')
+[0.954s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.954s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/phc2603/ros/install/minebot_playground/share/minebot_playground/hook/ament_prefix_path.ps1'
+[0.956s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/phc2603/ros/install/minebot_playground/share/minebot_playground/hook/ament_prefix_path.dsv'
+[0.958s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/phc2603/ros/install/minebot_playground/share/minebot_playground/hook/ament_prefix_path.sh'
+[0.960s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.960s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.421s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/phc2603/ros/src/minebot_playground'
+[1.421s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.421s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.593s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/phc2603/ros/src/minebot_playground': PYTHONPATH=/home/phc2603/ros/build/minebot_playground/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/minebot_playground build --build-base /home/phc2603/ros/build/minebot_playground/build install --record /home/phc2603/ros/build/minebot_playground/install.log --single-version-externally-managed install_data
+[3.660s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/phc2603/ros/src/minebot_playground' returned '0': PYTHONPATH=/home/phc2603/ros/build/minebot_playground/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/minebot_playground build --build-base /home/phc2603/ros/build/minebot_playground/build install --record /home/phc2603/ros/build/minebot_playground/install.log --single-version-externally-managed install_data
+[3.665s] Level 1:colcon.colcon_core.environment:checking '/home/phc2603/ros/install/minebot_playground' for CMake module files
+[3.667s] Level 1:colcon.colcon_core.environment:checking '/home/phc2603/ros/install/minebot_playground' for CMake config files
+[3.668s] Level 1:colcon.colcon_core.environment:checking '/home/phc2603/ros/install/minebot_playground/lib'
+[3.669s] Level 1:colcon.colcon_core.environment:checking '/home/phc2603/ros/install/minebot_playground/bin'
+[3.669s] Level 1:colcon.colcon_core.environment:checking '/home/phc2603/ros/install/minebot_playground/lib/pkgconfig/minebot_playground.pc'
+[3.669s] Level 1:colcon.colcon_core.environment:checking '/home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages'
+[3.670s] Level 1:colcon.colcon_core.shell:create_environment_hook('minebot_playground', 'pythonpath')
+[3.670s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/phc2603/ros/install/minebot_playground/share/minebot_playground/hook/pythonpath.ps1'
+[3.671s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/phc2603/ros/install/minebot_playground/share/minebot_playground/hook/pythonpath.dsv'
+[3.672s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/phc2603/ros/install/minebot_playground/share/minebot_playground/hook/pythonpath.sh'
+[3.674s] Level 1:colcon.colcon_core.environment:checking '/home/phc2603/ros/install/minebot_playground/bin'
+[3.674s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(minebot_playground)
+[3.675s] INFO:colcon.colcon_core.shell:Creating package script '/home/phc2603/ros/install/minebot_playground/share/minebot_playground/package.ps1'
+[3.676s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/phc2603/ros/install/minebot_playground/share/minebot_playground/package.dsv'
+[3.678s] INFO:colcon.colcon_core.shell:Creating package script '/home/phc2603/ros/install/minebot_playground/share/minebot_playground/package.sh'
+[3.679s] INFO:colcon.colcon_core.shell:Creating package script '/home/phc2603/ros/install/minebot_playground/share/minebot_playground/package.bash'
+[3.681s] INFO:colcon.colcon_core.shell:Creating package script '/home/phc2603/ros/install/minebot_playground/share/minebot_playground/package.zsh'
+[3.683s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/phc2603/ros/install/minebot_playground/share/colcon-core/packages/minebot_playground)
+[3.685s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[3.687s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[3.687s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[3.688s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[3.836s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[3.836s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[3.837s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[3.837s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[3.843s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[3.843s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[3.844s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/phc2603/ros/install/local_setup.ps1'
+[3.846s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/phc2603/ros/install/_local_setup_util_ps1.py'
+[3.848s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/phc2603/ros/install/setup.ps1'
+[3.850s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/phc2603/ros/install/local_setup.sh'
+[3.851s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/phc2603/ros/install/_local_setup_util_sh.py'
+[3.853s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/phc2603/ros/install/setup.sh'
+[3.855s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/phc2603/ros/install/local_setup.bash'
+[3.856s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/phc2603/ros/install/setup.bash'
+[3.857s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/phc2603/ros/install/local_setup.zsh'
+[3.859s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/phc2603/ros/install/setup.zsh'
