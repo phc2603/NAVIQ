@@ -22,12 +22,14 @@ Analog index -> 0
 RB_ACELLERATOR_BUTTON_INDEX = 5
 LEFT_ANALOG_X_AXIS_BUTTON_INDEX = 0
 LEFT_ANALOG_Y_AXIS_BUTTON_INDEX = 1
+MAXIMUM_ACELERATION = 3
+MINIMUM_ACELERATION = 0
 
 MODES = {
     "Pesado": {"index_button": 1, "speed": 0.5},
     "Normal": {"index_button": 0, "speed": 1},
-    "Turbo": {"index_button": 2, "speed": 2},
-    "Turbo maximo": {"index_button": 3, "speed": 3}
+    "Turbo": {"index_button": 2, "speed": 1.25},
+    "Turbo maximo": {"index_button": 3, "speed": 1.5}
 }
 
 
@@ -39,29 +41,30 @@ class Joystick:
             print("No joystick detected")
             raise SystemExit
         self.mode = "Normal"
+        self.__aceleration_speed = 0
         self.__joy = pygame.joystick.Joystick(0)
         self.__joy.init()
 
     #get the coordinate positions in the circle
     def get_angular_vel(self):
+        self.set_speeding()
         pygame.event.pump()
-        if not self.is_speeding():
-            return {
-                "x": 0,
-                "y": 0,
-                'debug': "NOT SPEEDING"
-            }
         x_axis = self.__joy.get_axis(LEFT_ANALOG_X_AXIS_BUTTON_INDEX)
         y_axis = self.__joy.get_axis(LEFT_ANALOG_Y_AXIS_BUTTON_INDEX)
         return {
-            "x": x_axis,
-            "y": y_axis * -1
+            "x": x_axis * self.__aceleration_speed,
+            "y": y_axis * -1 * self.__aceleration_speed
         }
 
+
     #return if the speed button is active
-    def is_speeding(self):
+    def set_speeding(self):
         pygame.event.pump()
-        return self.__joy.get_button(RB_ACELLERATOR_BUTTON_INDEX)
+        if self.__joy.get_button(RB_ACELLERATOR_BUTTON_INDEX) and self.__aceleration_speed <= MAXIMUM_ACELERATION:
+            self.__aceleration_speed += 0.01
+        else:
+            if self.__aceleration_speed > MINIMUM_ACELERATION:
+                self.__aceleration_speed -= 0.01
 
     def set_mode(self, mode_label):
         pygame.event.pump()

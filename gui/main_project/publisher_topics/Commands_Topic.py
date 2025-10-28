@@ -1,6 +1,6 @@
 import roslibpy
 
-COMMANDS_TOPIC = '/robot_commands'  # topic to control the robot
+COMMANDS_TOPIC = '/cmd_vel'  # topic to control the robot
 
 
 class Commands_Topic:

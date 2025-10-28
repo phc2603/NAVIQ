@@ -259,7 +259,7 @@ class GUI:
                 try:
                     msg = {
                         'linear': {'x': round(float(lin), 2), 'y': 0, 'z': 0},
-                        'angular': {'x': 0, 'y': 0, 'z': round(float(ang), 2)}
+                        'angular': {'x': 0, 'y': 0, 'z': round(float(ang), 2) * -1}
                     }
                     self.ros_data.robot_command_publisher.send_commands(msg)
                     # update last coordinates that has been sent
