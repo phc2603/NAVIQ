@@ -39,7 +39,7 @@ class Joystick:
         pygame.joystick.init()
         if pygame.joystick.get_count() == 0:
             print("No joystick detected")
-            raise SystemExit
+            #raise SystemExit
         self.mode = "Normal"
         self.__aceleration_speed = 0
         self.__joy = pygame.joystick.Joystick(0)

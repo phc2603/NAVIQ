@@ -1,7 +1,7 @@
 import tkinter as tk
-from ROS_Bridge.ROS_Bridge import ROS_Bridge
+from ROS_RCLPY.Ros_rclpy import Ros_Topics
 from joystick.Joystick import Joystick
-
+from geometry_msgs.msg import Twist, Vector3
 
 class GUI:
     def __init__(self, window):
@@ -37,7 +37,8 @@ class GUI:
         self.create_analog_stick(self.joystick_frame, size=120)
 
         # --- ROS
-        self.ros_data = ROS_Bridge()
+        self.ros_data = Ros_Topics()
+        self.ros_data.spin_in_thread() #execute in another thread
 
         # --- hardware joystick
         try:
@@ -98,7 +99,7 @@ class GUI:
 
     def send_cmd(self, command):
         if self.ros_data.robot_command_publisher is not None:
-            self.ros_data.robot_command_publisher.send_commands(command=command)
+            self.ros_data.robot_command_publisher.send_commands(twistCommand=command)
 
     # --- closing the app ---
     def on_closing(self):
@@ -110,7 +111,7 @@ class GUI:
             pass
 
         try:
-            self.ros_data.on_ros_close()
+            self.ros_data.shutdown()
         except Exception:
             pass
 
@@ -157,7 +158,7 @@ class GUI:
         # binds de mouse
         self.analog_canvas.bind("<Button-1>", lambda e: self._analog_press(e))
         self.analog_canvas.bind("<B1-Motion>", lambda e: self._analog_move(e))
-        self.analog_canvas.bind("<ButtonRelease-1>", lambda e: self._analog_release(e))
+        self.analog_canvas.bind("<ButtonRelease-1>", lambda e: self._analog_release())
 
         # loop para envio contínuo enquanto houver movimento (taxa)
         self._analog_send_rate_ms = 100  # 10 Hz por padrão
@@ -215,7 +216,7 @@ class GUI:
         self._analog_last_ang = float(angular)
 
     # mouse release -> if drops the moouse, back to the center
-    def _analog_release(self, event):
+    def _analog_release(self):
         # return the knob to the center
         cx = self.analog_radius
         cy = self.analog_radius
@@ -230,7 +231,6 @@ class GUI:
         self._analog_last_ang = 0.0
 
     # loop to send the commands, if the coordinates change
-    import time
     def _analog_send_loop(self):
         lin = float(self._analog_last_lin)
         ang = float(self._analog_last_ang)
@@ -257,11 +257,10 @@ class GUI:
             # check if publisher already existis (its running in another thread)
             if (self.ros_data is not None) and (self.ros_data.robot_command_publisher is not None):
                 try:
-                    msg = {
-                        'linear': {'x': round(float(lin), 2), 'y': 0, 'z': 0},
-                        'angular': {'x': 0, 'y': 0, 'z': round(float(ang), 2) * -1}
-                    }
-                    self.ros_data.robot_command_publisher.send_commands(msg)
+                    twist_msg = Twist()
+                    twist_msg.linear = Vector3(x=round(float(lin),2), y=0.0, z=0.0)
+                    twist_msg.angular = Vector3(x=0.0, y=0.0, z=round(float(ang),2)*-1)
+                    self.ros_data.robot_command_publisher.send_commands(twistCommand=twist_msg)
                     # update last coordinates that has been sent
                     self._analog_sent_lin = float(lin)
                     self._analog_sent_ang = float(ang)
