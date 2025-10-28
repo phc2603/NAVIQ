@@ -1,0 +1,47 @@
+running develop
+Removing /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot-playground.egg-link (link to .)
+running egg_info
+writing ../../build/minebot_playground/minebot_playground.egg-info/PKG-INFO
+writing dependency_links to ../../build/minebot_playground/minebot_playground.egg-info/dependency_links.txt
+writing entry points to ../../build/minebot_playground/minebot_playground.egg-info/entry_points.txt
+writing requirements to ../../build/minebot_playground/minebot_playground.egg-info/requires.txt
+writing top-level names to ../../build/minebot_playground/minebot_playground.egg-info/top_level.txt
+reading manifest file '../../build/minebot_playground/minebot_playground.egg-info/SOURCES.txt'
+writing manifest file '../../build/minebot_playground/minebot_playground.egg-info/SOURCES.txt'
+running build
+running build_py
+copying minebot_playground/user_controller.py -> /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground
+copying minebot_playground/gas_mock.py -> /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground
+copying minebot_playground/usbcam_node.py -> /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground
+running install
+running install_lib
+creating /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground
+copying /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground/ip_stream_node.py -> /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground
+copying /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground/user_controller.py -> /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground
+copying /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground/__init__.py -> /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground
+copying /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground/gas_mock.py -> /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground
+copying /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground/control_auto.py -> /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground
+copying /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground/usbcam_node.py -> /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground
+copying /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground/camera_pub.py -> /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground
+copying /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground/gas_mock_pub.py -> /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground
+copying /home/phc2603/ros/build/minebot_playground/build/lib/minebot_playground/webcam_node.py -> /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground
+byte-compiling /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground/ip_stream_node.py to ip_stream_node.cpython-312.pyc
+byte-compiling /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground/user_controller.py to user_controller.cpython-312.pyc
+byte-compiling /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground/__init__.py to __init__.cpython-312.pyc
+byte-compiling /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground/gas_mock.py to gas_mock.cpython-312.pyc
+byte-compiling /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground/control_auto.py to control_auto.cpython-312.pyc
+byte-compiling /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground/usbcam_node.py to usbcam_node.cpython-312.pyc
+byte-compiling /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground/camera_pub.py to camera_pub.cpython-312.pyc
+byte-compiling /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground/gas_mock_pub.py to gas_mock_pub.cpython-312.pyc
+byte-compiling /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground/webcam_node.py to webcam_node.cpython-312.pyc
+running install_data
+copying resource/minebot_playground -> /home/phc2603/ros/install/minebot_playground/share/ament_index/resource_index/packages
+copying package.xml -> /home/phc2603/ros/install/minebot_playground/share/minebot_playground
+running install_egg_info
+Copying ../../build/minebot_playground/minebot_playground.egg-info to /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot_playground-0.0.0-py3.12.egg-info
+running install_scripts
+Installing control_auto script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+Installing gas_mock script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+Installing usbcam_node script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+Installing user_controller script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+writing list of installed files to '/home/phc2603/ros/build/minebot_playground/install.log'

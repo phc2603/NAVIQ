@@ -1,1 +1,0 @@
-/home/phc2603/ros/src/minebot_playground/setup.py

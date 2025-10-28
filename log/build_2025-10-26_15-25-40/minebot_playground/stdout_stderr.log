@@ -1,0 +1,19 @@
+running develop
+running egg_info
+writing minebot_playground.egg-info/PKG-INFO
+writing dependency_links to minebot_playground.egg-info/dependency_links.txt
+writing entry points to minebot_playground.egg-info/entry_points.txt
+writing requirements to minebot_playground.egg-info/requires.txt
+writing top-level names to minebot_playground.egg-info/top_level.txt
+reading manifest file 'minebot_playground.egg-info/SOURCES.txt'
+writing manifest file 'minebot_playground.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/phc2603/ros/install/minebot_playground/lib/python3.12/site-packages/minebot-playground.egg-link (link to .)
+Installing control_auto script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+Installing gas_mock script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+Installing usbcam_node script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+Installing user_controller script to /home/phc2603/ros/install/minebot_playground/lib/minebot_playground
+
+Installed /home/phc2603/ros/build/minebot_playground
+running symlink_data
+symbolically linking /home/phc2603/ros/build/minebot_playground/worlds/world_mine.sdf -> /home/phc2603/ros/install/minebot_playground/share/minebot_playground/worlds

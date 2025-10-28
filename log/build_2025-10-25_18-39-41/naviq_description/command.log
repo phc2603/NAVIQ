@@ -1,0 +1,6 @@
+Invoking command in '/home/phc2603/ros/build/naviq_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/phc2603/ros/src/naviq_description -DCMAKE_INSTALL_PREFIX=/home/phc2603/ros/install/naviq_description
+Invoked command in '/home/phc2603/ros/build/naviq_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake /home/phc2603/ros/src/naviq_description -DCMAKE_INSTALL_PREFIX=/home/phc2603/ros/install/naviq_description
+Invoking command in '/home/phc2603/ros/build/naviq_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/phc2603/ros/build/naviq_description -- -j16 -l16
+Invoked command in '/home/phc2603/ros/build/naviq_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --build /home/phc2603/ros/build/naviq_description -- -j16 -l16
+Invoking command in '/home/phc2603/ros/build/naviq_description': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/phc2603/ros/build/naviq_description
+Invoked command in '/home/phc2603/ros/build/naviq_description' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy /usr/bin/cmake --install /home/phc2603/ros/build/naviq_description

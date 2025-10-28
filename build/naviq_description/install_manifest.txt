@@ -1,0 +1,15 @@
+/home/phc2603/ros/install/naviq_description/share/ament_index/resource_index/package_run_dependencies/naviq_description
+/home/phc2603/ros/install/naviq_description/share/ament_index/resource_index/parent_prefix_path/naviq_description
+/home/phc2603/ros/install/naviq_description/share/naviq_description/environment/ament_prefix_path.sh
+/home/phc2603/ros/install/naviq_description/share/naviq_description/environment/ament_prefix_path.dsv
+/home/phc2603/ros/install/naviq_description/share/naviq_description/environment/path.sh
+/home/phc2603/ros/install/naviq_description/share/naviq_description/environment/path.dsv
+/home/phc2603/ros/install/naviq_description/share/naviq_description/local_setup.bash
+/home/phc2603/ros/install/naviq_description/share/naviq_description/local_setup.sh
+/home/phc2603/ros/install/naviq_description/share/naviq_description/local_setup.zsh
+/home/phc2603/ros/install/naviq_description/share/naviq_description/local_setup.dsv
+/home/phc2603/ros/install/naviq_description/share/naviq_description/package.dsv
+/home/phc2603/ros/install/naviq_description/share/ament_index/resource_index/packages/naviq_description
+/home/phc2603/ros/install/naviq_description/share/naviq_description/cmake/naviq_descriptionConfig.cmake
+/home/phc2603/ros/install/naviq_description/share/naviq_description/cmake/naviq_descriptionConfig-version.cmake
+/home/phc2603/ros/install/naviq_description/share/naviq_description/package.xml
