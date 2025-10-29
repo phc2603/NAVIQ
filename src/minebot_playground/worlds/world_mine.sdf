@@ -1,126 +1,59 @@
 <?xml version="1.0" ?>
 <sdf version="1.9">
-  <world name="mina_simples_com_paredes">
+  <world name="mina_labirinto_com_solucao">
 
     <scene>
-      <ambient>0.2 0.2 0.2 1.0</ambient>
-      <background>0.2 0.2 0.2 1.0</background>
+      <ambient>0.1 0.1 0.1 1.0</ambient>
+      <background>0.15 0.15 0.15 1.0</background>
       <shadows>true</shadows>
     </scene>
-    <light type="directional" name="luz_fraca">
+
+    <light type="directional" name="luz_fraca_mina">
       <cast_shadows>true</cast_shadows>
-      <pose>0 0 15 0 0 0</pose>
-      <diffuse>0.6 0.6 0.6 1</diffuse>
-      <specular>0.3 0.3 0.3 1</specular>
+      <pose>0 0 20 0 0 0</pose>
+      <diffuse>0.5 0.5 0.5 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
       <direction>0.1 0.1 -1</direction>
     </light>
 
-    <model name="chao_marrom">
+    <model name="chao_da_mina">
       <static>true</static>
       <pose>0 0 -0.05 0 0 0</pose>
       <link name="link">
         <collision name="collision">
-          <geometry><box><size>100 100 0.1</size></box></geometry>
+          <geometry><box><size>30 30 0.1</size></box></geometry>
         </collision>
         <visual name="visual">
-          <geometry><box><size>100 100 0.1</size></box></geometry>
+          <geometry><box><size>30 30 0.1</size></box></geometry>
           <material><diffuse>0.55 0.42 0.26 1.0</diffuse></material>
         </visual>
       </link>
     </model>
 
-    <model name="pedra_01">
-      <static>true</static>
-      <pose>5 3 0.25 0 0 0</pose>
-      <link name="link">
-        <collision name="collision"><geometry><sphere><radius>0.25</radius></sphere></geometry></collision>
-        <visual name="visual">
-          <geometry><sphere><radius>0.25</radius></sphere></geometry>
-          <material>
-            <diffuse>0.45 0.35 0.25 1.0</diffuse>
-          </material>
-        </visual>
-      </link>
-    </model>
-    <model name="pedra_02">
-      <static>true</static>
-      <pose>2 -4 0.4 0 0 0</pose>
-      <link name="link">
-        <collision name="collision"><geometry><sphere><radius>0.4</radius></sphere></geometry></collision>
-        <visual name="visual">
-          <geometry><sphere><radius>0.4</radius></sphere></geometry>
-          <material>
-             <diffuse>0.5 0.4 0.3 1.0</diffuse>
-          </material>
-        </visual>
-      </link>
-    </model>
-    <model name="pedra_03">
-      <static>true</static>
-      <pose>-3 -2 0.3 0 0 0</pose>
-      <link name="link">
-        <collision name="collision"><geometry><sphere><radius>0.3</radius></sphere></geometry></collision>
-        <visual name="visual">
-          <geometry><sphere><radius>0.3</radius></sphere></geometry>
-          <material>
-            <diffuse>0.4 0.3 0.2 1.0</diffuse>
-          </material>
-        </visual>
-      </link>
-    </model>
-    <model name="pedra_04">
-      <static>true</static>
-      <pose>4.5 3.5 0.2 0 0 0</pose>
-      <link name="link">
-        <collision name="collision"><geometry><sphere><radius>0.2</radius></sphere></geometry></collision>
-        <visual name="visual">
-          <geometry><sphere><radius>0.2</radius></sphere></geometry>
-          <material>
-            <diffuse>0.48 0.38 0.28 1.0</diffuse>
-          </material>
-        </visual>
-      </link>
-    </model>
+    <model name="pedra_01"><static>true</static><pose>-12 12 0.3 0 0 0.5</pose><link name="link"><collision name="collision"><geometry><sphere><radius>0.3</radius></sphere></geometry></collision><visual name="visual"><geometry><sphere><radius>0.3</radius></sphere></geometry><material><diffuse>0.4 0.3 0.2 1</diffuse></material></visual></link></model>
+    <model name="pedra_02"><static>true</static><pose>-4 -11 0.4 0 0 0</pose><link name="link"><collision name="collision"><geometry><sphere><radius>0.4</radius></sphere></geometry></collision><visual name="visual"><geometry><sphere><radius>0.4</radius></sphere></geometry><material><diffuse>0.5 0.4 0.3 1</diffuse></material></visual></link></model>
+    <model name="pedra_02_01"><static>true</static><pose>-4 -13 0.4 0 0 0</pose><link name="link"><collision name="collision"><geometry><sphere><radius>0.4</radius></sphere></geometry></collision><visual name="visual"><geometry><sphere><radius>0.4</radius></sphere></geometry><material><diffuse>0.5 0.4 0.3 1</diffuse></material></visual></link></model>
+    <model name="pedra_03"><static>true</static><pose>2 7 0.25 0 0 0.2</pose><link name="link"><collision name="collision"><geometry><sphere><radius>0.25</radius></sphere></geometry></collision><visual name="visual"><geometry><sphere><radius>0.25</radius></sphere></geometry><material><diffuse>0.45 0.35 0.25 1</diffuse></material></visual></link></model>
+    <model name="pedra_04"><static>true</static><pose>12 -2 0.35 0 0 0</pose><link name="link"><collision name="collision"><geometry><sphere><radius>0.35</radius></sphere></geometry></collision><visual name="visual"><geometry><sphere><radius>0.35</radius></sphere></geometry><material><diffuse>0.48 0.38 0.28 1</diffuse></material></visual></link></model>
+    <model name="pedra_05"><static>true</static><pose>8 11 0.3 0 0 0</pose><link name="link"><collision name="collision"><geometry><sphere><radius>0.3</radius></sphere></geometry></collision><visual name="visual"><geometry><sphere><radius>0.3</radius></sphere></geometry><material><diffuse>0.4 0.3 0.2 1</diffuse></material></visual></link></model>
+    <model name="pedra_06"><static>true</static><pose>-8 0 0.2 0 0 0</pose><link name="link"><collision name="collision"><geometry><sphere><radius>0.2</radius></sphere></geometry></collision><visual name="visual"><geometry><sphere><radius>0.2</radius></sphere></geometry><material><diffuse>0.5 0.45 0.35 1</diffuse></material></visual></link></model>
 
-    <model name='parede_norte'>
-      <static>true</static>
-      <pose>0 10 2.5 0 0 0</pose> <link name='link'>
-        <collision name='collision'>
-          <geometry><box><size>40 0.5 5</size></box></geometry> </collision>
-        <visual name='visual'>
-          <geometry><box><size>40 0.5 5</size></box></geometry>
-          <material><diffuse>0.3 0.3 0.3 1.0</diffuse></material> </visual>
-      </link>
-    </model>
-    <model name='parede_sul'>
-      <static>true</static>
-      <pose>0 -10 2.5 0 0 0</pose> <link name='link'>
-        <collision name='collision'><geometry><box><size>40 0.5 5</size></box></geometry></collision>
-        <visual name='visual'>
-          <geometry><box><size>40 0.5 5</size></box></geometry>
-          <material><diffuse>0.3 0.3 0.3 1.0</diffuse></material>
-        </visual>
-      </link>
-    </model>
-    <model name='parede_leste'>
-      <static>true</static>
-      <pose>20 0 2.5 0 0 0</pose> <link name='link'>
-        <collision name='collision'><geometry><box><size>0.5 20 5</size></box></geometry></collision> <visual name='visual'>
-          <geometry><box><size>0.5 20 5</size></box></geometry>
-          <material><diffuse>0.3 0.3 0.3 1.0</diffuse></material>
-        </visual>
-      </link>
-    </model>
-    <model name='parede_oeste'>
-      <static>true</static>
-      <pose>-20 0 2.5 0 0 0</pose> <link name='link'>
-        <collision name='collision'><geometry><box><size>0.5 20 5</size></box></geometry></collision>
-        <visual name='visual'>
-          <geometry><box><size>0.5 20 5</size></box></geometry>
-          <material><diffuse>0.3 0.3 0.3 1.0</diffuse></material>
-        </visual>
-      </link>
-    </model>
+    <model name='parede_norte'><static>true</static><pose>0 15 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>30 0.2 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>30 0.2 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+    <model name='parede_sul'><static>true</static><pose>0 -15 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>30 0.2 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>30 0.2 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+    <model name='parede_leste'><static>true</static><pose>15 0 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>0.2 30 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>0.2 30 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+    <model name='parede_oeste'><static>true</static><pose>-15 0 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>0.2 30 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>0.2 30 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+    
+    <model name='ph_1'><static>true</static><pose>-3.5 10 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>20 0.2 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>20 0.2 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+    <model name='ph_2'><static>true</static><pose>2.5 5 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>15 0.2 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>15 0.2 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+    <model name='ph_3'><static>true</static><pose>3.5 0 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>13 0.2 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>13 0.2 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+    <model name='ph_4'><static>true</static><pose>-5 -5 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>20 0.2 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>20 0.2 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+    <model name='ph_5'><static>true</static><pose>3 -10 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>20 0.2 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>20 0.2 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+
+    <model name='pv_1'><static>true</static><pose>-10 7.5 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>0.2 15 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>0.2 15 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+    <model name='pv_2'><static>true</static><pose>-5 0 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>0.2 10 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>0.2 10 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+    <model name='pv_3'><static>true</static><pose>0 12.5 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>0.2 5 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>0.2 5 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+    <model name='pv_4'><static>true</static><pose>5 -7.5 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>0.2 5 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>0.2 5 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
+    <model name='pv_5'><static>true</static><pose>10 -5.0 1.5 0 0 0</pose><link name='link'><collision name='collision'><geometry><box><size>0.2 15 3</size></box></geometry></collision><visual name='visual'><geometry><box><size>0.2 10 3</size></box></geometry><material><diffuse>0.3 0.3 0.3 1</diffuse></material></visual></link></model>
 
   </world>
 </sdf>

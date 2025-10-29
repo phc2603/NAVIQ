@@ -10,7 +10,9 @@ setup.py
 ../../build/minebot_playground/minebot_playground.egg-info/zip-safe
 launch/display.launch.py
 minebot_playground/__init__.py
+minebot_playground/camera_gazebo.py
 minebot_playground/gas_mock.py
+minebot_playground/rasberry_cam.py
 minebot_playground/usbcam_node.py
 minebot_playground/user_controller.py
 minebot_playground.egg-info/PKG-INFO

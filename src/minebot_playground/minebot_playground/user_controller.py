@@ -2,7 +2,7 @@ import rclpy
 from rclpy.node import Node
 from geometry_msgs.msg import Twist
 
-#SUGESTÃO: ENVIAR OS COMANDOS VIA SERAL UART
+
 class CommandsListenerNode(Node):
     def __init__(self):
         super().__init__('cmd_vel')

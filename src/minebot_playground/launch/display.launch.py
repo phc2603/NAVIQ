@@ -8,25 +8,24 @@ import xacro
 
 
 def generate_launch_description():
-    # Caminho para o seu pacote
+    # path to package
     pkg_naviq_description = get_package_share_directory('minebot_playground')
 
-    # Caminho para o arquivo URDF/XACRO
+    # package to the world and urdf file
     urdf_file_path = os.path.join(pkg_naviq_description, 'urdf', 'naviq.urdf')
 
     # path to custom world
     world_file = os.path.join(pkg_naviq_description, 'worlds', 'world_mine.sdf')
 
-    # Carrega o conteúdo do URDF ou XACRO (suporta ambos)
+    # load robot data 
     if urdf_file_path.endswith('.xacro'):
         robot_description_config = xacro.process_file(urdf_file_path)
         robot_description = robot_description_config.toxml()
     else:
-        # se for .urdf (XML já processado), apenas lê o arquivo
         with open(urdf_file_path, 'r') as f:
             robot_description = f.read()
 
-    # 1. Iniciar o Gazebo (ros_gz_sim)
+    # 1. init in Gazebo (ros_gz_sim)
     pkg_ros_gz_sim = get_package_share_directory('ros_gz_sim')
     gazebo = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -47,7 +46,7 @@ def generate_launch_description():
         }]
     )
 
-    # 3. Spawnar o robô no Gazebo (com pequeno offset no z)
+    # 3. Spawwn robot in gazebo
     spawn_entity = Node(
         package='ros_gz_sim',
         executable='create',
@@ -55,8 +54,8 @@ def generate_launch_description():
             '-string', robot_description,
             '-name', 'naviq',
             '-allow_renaming', 'true',
-            '-x', '0.0',
-            '-y', '0.0',
+            '-x', '-13.0',
+            '-y', '-13.0',
             '-z', '0.02'
         ],
         output='screen'

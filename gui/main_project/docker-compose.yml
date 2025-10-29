@@ -1,0 +1,90 @@
+version: "3.9"
+
+x-common-environment: &common-env
+  ROS_DOMAIN_ID: 1        
+  DISPLAY: ${DISPLAY}
+  QT_X11_NO_MITSHM: 1
+
+x-common-volumes: &common-volumes
+  - .:/app
+  - /tmp/.X11-unix:/tmp/.X11-unix
+
+services:
+  main.py:
+    build: .
+    container_name: gui
+    network_mode: host
+    environment:
+      <<: *common-env
+    volumes:
+      <<: *common-volumes
+    privileged: true
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               python3 src/main.py"
+
+  
+  commands_topic:
+    build: .
+    container_name: commands_topic_node
+    network_mode: host
+    environment:
+      <<: *common-env
+    volumes:
+      <<: *common-volumes
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               python3 src/Commands_Topic.py"
+
+  
+  ch4_topic:
+    build: .
+    container_name: ch4_topic_node
+    network_mode: host
+    environment:
+      <<: *common-env
+    volumes:
+      <<: *common-volumes
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               python3 src/CH4_Topic.py"
+
+  
+  co2_topic:
+    build: .
+    container_name: co2_topic_node
+    network_mode: host
+    environment:
+      <<: *common-env
+    volumes:
+      <<: *common-volumes
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               python3 src/CO2_Topic.py"
+
+  
+  image_topic:
+    build: .
+    container_name: image_topic_node
+    network_mode: host
+    environment:
+      <<: *common-env
+    volumes:
+      <<: *common-volumes
+    command: >
+      bash -c "source /opt/ros/jazzy/setup.bash &&
+               python3 src/Image_Topic.py"
+
+  # ➕ Exemplo: nó extra (para amigos adicionarem)
+  # basta copiar este bloco e mudar o script em src/
+  # my_new_topic:
+  #   build: .
+  #   container_name: my_new_topic_node
+  #   network_mode: host
+  #   environment:
+  #     <<: *common-env
+  #   volumes:
+  #     <<: *common-volumes
+  #   command: >
+  #     bash -c "source /opt/ros/jazzy/setup.bash &&
+  #              python3 src/My_New_Topic.py"

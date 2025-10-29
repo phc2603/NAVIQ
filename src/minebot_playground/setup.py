@@ -33,6 +33,10 @@ setup(
             'gas_mock = minebot_playground.gas_mock:main',
             'user_controller = minebot_playground.user_controller:main',
             'usbcam_node = minebot_playground.usbcam_node:main',
+            'raspi_camera_publisher_compressed = minebot_playground.raspi_camera_publisher_compressed:main',
+            'camera_gazebo = minebot_playground.camera_gazebo:main'
         ],
     }
 )
+
+

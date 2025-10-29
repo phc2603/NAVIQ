@@ -1,5 +1,7 @@
 [console_scripts]
+camera_gazebo = minebot_playground.camera_gazebo:main
 control_auto = minebot_playground.control_auto:main
 gas_mock = minebot_playground.gas_mock:main
+raspi_camera_publisher_compressed = minebot_playground.raspi_camera_publisher_compressed:main
 usbcam_node = minebot_playground.usbcam_node:main
 user_controller = minebot_playground.user_controller:main
