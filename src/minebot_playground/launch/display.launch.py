@@ -54,7 +54,7 @@ def generate_launch_description():
             '-string', robot_description,
             '-name', 'naviq',
             '-allow_renaming', 'true',
-            '-x', '-13.0',
+            '-x', '-8.0',
             '-y', '-13.0',
             '-z', '0.02'
         ],

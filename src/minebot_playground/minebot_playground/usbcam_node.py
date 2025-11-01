@@ -17,8 +17,8 @@ class CameraNode(Node):
             self.get_logger().error("Failed to capture image in index 0")
             rclpy.shutdown()
         
-        #self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)  # Set the frame width to 640 pixels
-        #self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)  # Set the frame height to 480 pixels
+        self.cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)  # Set the frame width to 640 pixels
+        self.cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)  # Set the frame height to 480 pixels
         
         self.cap.set(cv2.CAP_PROP_FPS, 20)  # Set the frames per second to 20
         self.cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc(*'MJPG')) #compress/encode data to avoid timeout
@@ -55,82 +55,5 @@ def main():
         rclpy.shutdown()  # Shut down the ROS 2 Python client library
 
 if __name__ == '__main__':
+    print(cv2.__version__)
     main()  # Run the main function if this script is executed
-
-
-
-import rclpy
-from rclpy.node import Node
-from cv_bridge import CvBridge
-from picamera2 import Picamera2
-from sensor_msgs.msg import CompressedImage
-import time
-
-class CameraPublisher(Node):
-    def _init_(self):
-        super()._init_('camera_publisher')
-        self.publisher_ = self.create_publisher(CompressedImage, 'image_raw', 10)
-
-        self.get_logger().info('Iniciando Picamera2...')
-        try:
-            self.picam2 = Picamera2()
-            # Configura para visualização (mais rápido)
-            self.config = self.picam2.create_video_configuration(main={"size": (640, 480)})
-            self.picam2.configure(self.config)
-            self.picam2.start()
-            self.get_logger().info('Câmera iniciada com sucesso.')
-        except Exception as e:
-            self.get_logger().error(f'Falha ao iniciar câmera: {e}')
-            # Tenta fechar
-            try: self.picam2.close()
-            except: pass
-            rclpy.shutdown()
-            return
-
-        self.bridge = CvBridge()
-
-        # Cria um timer para capturar e publicar imagens
-        self.timer = self.create_timer(0.05, self.timer_callback) # ~20 FPS
-
-    def timer_callback(self):
-        try:
-            # Captura o frame como um array numpy
-            im = self.picam2.capture_array()
-
-            # Converte o array (BGR) para uma mensagem ROS
-            # Nota: picamera2 captura em BGR por padrão, o que é ótimo para o ROS
-            ros_image = self.bridge.cv2_to_compressed_imgmsg(im, dst_format='jpeg')#compact and encode the message
-
-            # Adiciona o carimbo de tempo
-            ros_image.header.stamp = self.get_clock().now().to_msg()
-            ros_image.header.frame_id = "camera"
-
-            # Publica a imagem
-            self.publisher_.publish(ros_image)
-
-        except Exception as e:
-            self.get_logger().warn(f'Falha ao capturar/publicar frame: {e}')
-
-    def destroy_node(self):
-        # Garante que a câmera será desligada
-        self.get_logger().info('Desligando câmera...')
-        self.picam2.stop()
-        self.picam2.close()
-        super().destroy_node()
-
-def main(args=None):
-    rclpy.init(args=args)
-    camera_publisher = CameraPublisher()
-
-    if rclpy.ok():
-        try:
-            rclpy.spin(camera_publisher)
-        except KeyboardInterrupt:
-            pass
-        finally:
-            # Destroi o nó e desliga a câmera
-            camera_publisher.destroy_node()
-            rclpy.shutdown()
-
-if _name_ == '_main_':
-    main()

@@ -1,0 +1,5 @@
+gpiozero==2.0.1
+opencv-python==4.6.0
+cv_bridge==4.1.0
+pygame==2.5.2
+pillow==12.0.0
