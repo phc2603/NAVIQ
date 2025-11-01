@@ -1,12 +1,13 @@
-NAVIQ – Muito mais que um robô
-Introdução
+# NAVIQ – Muito mais que um robô
+
+## Introdução
 
 O NAVIQ é um protótipo de robô móvel de pequeno porte, construído de forma robusta e escalável, utilizando tecnologias modernas como ROS 2 Jazzy e Gazebo. Seu principal objetivo é possibilitar o controle e monitoramento de ambientes em tempo real, especialmente em locais de difícil acesso ou com riscos à integridade humana, realizando inspeções seguras em terrenos potencialmente perigosos.
 
 Imagine uma empresa de mineração que utiliza explosivos para romper camadas subterrâneas e criar novos caminhos. Após uma detonação, o ambiente pode conter gases tóxicos — como monóxido de carbono (CO) e metano (CH₄) — altamente inflamáveis e prejudiciais à saúde. Em 19 de setembro de 2025, um trabalhador no Sul da Bahia faleceu em decorrência de uma explosão súbita em uma mina. Casos como esse podem ser evitados com o uso do NAVIQ.
 Equipado com sensores de gases e uma câmera capaz de capturar imagens a 20 quadros por segundo em resolução 720p, o robô é capaz de identificar riscos de explosão e monitorar a qualidade do ar, avaliando se o ambiente é seguro para a entrada de pessoas.
 
-Conceitos técnicos – Interface Gráfica
+## Conceitos técnicos – Interface Gráfica
 
 O sistema do NAVIQ é composto por uma interface gráfica (GUI) desenvolvida em Python, responsável por interagir diretamente com o usuário. Essa interface possui:
 
@@ -32,7 +33,7 @@ O projeto utiliza a versão Jazzy, mais recente do ROS 2, que oferece melhorias 
 
 No diretório src, encontra-se o pacote principal do sistema: minebot_playground, onde estão todos os nós, arquivos de configuração, modelos do robô e scripts de simulação.
 
-Simulador
+## Simulador
 
 O simulador foi construído no Gazebo, um ambiente virtual 3D utilizado para testar o robô e validar o comportamento dos nós ROS 2 antes da execução em hardware real.
 
@@ -43,7 +44,7 @@ Já o arquivo world_mine.sdf, presente na pasta worlds, define o mundo virtual d
 
 O arquivo launch.py é responsável por iniciar a simulação no Gazebo. Ele carrega o modelo URDF do robô, inicializa o simulador, publica o estado do robô por meio do robot_state_publisher, insere o modelo no ambiente e cria uma ponte de comunicação entre ROS 2 e Gazebo — garantindo a troca de mensagens, como comandos de velocidade (cmd_vel) e dados de odometria (/odom).
 
-Nós ROS 2 e Integração com o Hardware
+## Nós ROS 2 e Integração com o Hardware
 
 No ROS 2, um nó é uma unidade independente de execução que realiza uma função específica dentro do sistema.
 Cada nó pode publicar (enviar) ou assinar (receber) mensagens por meio de tópicos, o que permite que diferentes componentes do robô se comuniquem de forma modular.
