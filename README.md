@@ -101,14 +101,6 @@ O nó user_controller, por sua vez, é o componente encarregado do controle dos 
 
 Já o nó usbcam_node tem a função de capturar e transmitir vídeo em tempo real. Ele utiliza a câmera conectada ao Raspberry Pi — seja USB ou nativa — para capturar imagens, que são convertidas em mensagens compactadas e publicadas continuamente no tópico usbcam_node/compressed. A interface gráfica, ao se inscrever nesse tópico, exibe o vídeo em tempo real para o operador, possibilitando uma visualização direta do ambiente onde o robô está atuando.
 
+--
 
-## Conclusão
-
-O desenvolvimento do NAVIQ demonstrou a capacidade do ROS 2 como plataforma de integração entre hardware e software em sistemas robóticos distribuídos.
-A arquitetura projetada possibilita o controle remoto, a visualização em tempo real e o monitoramento ambiental com base em sensores simulados e câmeras embarcadas.
-
-O uso do Raspberry Pi como unidade central de processamento permitiu a execução simultânea de múltiplos nós ROS 2, garantindo a comunicação entre os módulos de controle, percepção e visualização.
-Mesmo com sensores simulados, o ecossistema mostrou-se estável, escalável e pronto para receber componentes reais, como sensores de gases, novos atuadores e câmeras de maior resolução.
-
-Com a substituição dos dados mockados por leituras reais e a calibração dos motores, o NAVIQ estará apto para atuar em ambientes de risco — como minas subterrâneas —, reduzindo a exposição humana e aumentando a segurança operacional.
-Assim, o projeto cumpre seu objetivo principal: provar que um robô acessível, modular e inteligente pode salvar vidas e transformar o modo como exploramos ambientes hostis.
+Vídeo de apresentação do NAVIQ: https://youtube.com/shorts/C2iOFGqPQZw?feature=share
