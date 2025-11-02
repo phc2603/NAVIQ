@@ -101,6 +101,6 @@ O nó user_controller, por sua vez, é o componente encarregado do controle dos 
 
 Já o nó usbcam_node tem a função de capturar e transmitir vídeo em tempo real. Ele utiliza a câmera conectada ao Raspberry Pi — seja USB ou nativa — para capturar imagens, que são convertidas em mensagens compactadas e publicadas continuamente no tópico usbcam_node/compressed. A interface gráfica, ao se inscrever nesse tópico, exibe o vídeo em tempo real para o operador, possibilitando uma visualização direta do ambiente onde o robô está atuando.
 
---
+## 
 
 Vídeo de apresentação do NAVIQ: https://youtube.com/shorts/C2iOFGqPQZw?feature=share
