@@ -4,7 +4,7 @@
 
 O NAVIQ é um protótipo de robô móvel de pequeno porte, construído de forma robusta e escalável, utilizando tecnologias modernas como ROS 2 Jazzy e Gazebo. Seu principal objetivo é possibilitar o controle e monitoramento de ambientes em tempo real, especialmente em locais de difícil acesso ou com riscos à integridade humana, realizando inspeções seguras em terrenos potencialmente perigosos.
 
-Imagine uma empresa de mineração que utiliza explosivos para romper camadas subterrâneas e criar novos caminhos. Após uma detonação, o ambiente pode conter gases tóxicos — como monóxido de carbono (CO) e metano (CH₄) — altamente inflamáveis e prejudiciais à saúde. Em 19 de setembro de 2025, um trabalhador no Sul da Bahia faleceu em decorrência de uma explosão súbita em uma mina. Casos como esse podem ser evitados com o uso do NAVIQ.
+Imagine uma empresa de mineração que utiliza explosivos para romper camadas subterrâneas e criar novos caminhos. Após uma detonação, o ambiente pode conter gases tóxicos — como monóxido de carbono (CO) e metano (CH₄) — altamente inflamáveis e prejudiciais à saúde. Em 19 de setembro de 2025, um trabalhador no Sul da Bahia faleceu em decorrência de uma explosão súbita em uma mina. Casos como esse podem ser evitados com o uso do NAVIQ, que detecta a quantidade (ppm) de gases tóxicos, como o metano, informando se há risco de uma eventual explosão ou se o ar está muito contaminado, evitando doenças a longo prazo como câncer e bronquiolite.
 Equipado com sensores de gases e uma câmera capaz de capturar imagens a 20 quadros por segundo em resolução 720p, o robô é capaz de identificar riscos de explosão e monitorar a qualidade do ar, avaliando se o ambiente é seguro para a entrada de pessoas.
 
 ## Conceitos técnicos – Interface Gráfica
