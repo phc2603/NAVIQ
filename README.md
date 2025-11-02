@@ -89,15 +89,20 @@ Ele utiliza a biblioteca OpenCV para capturar os frames e o CvBridge para conver
 Essas imagens são publicadas continuamente no tópico usbcam_node/compressed em formato JPEG, a uma taxa de aproximadamente 20 FPS.
 A interface gráfica, como subscriber, recebe esses frames e os exibe em tempo real para o operador.
 
-Integração dos Nós
+`Integração dos Nós`
 
-O sistema completo utiliza o modelo de comunicação publisher/subscriber, no qual cada nó tem uma função específica e interage de forma assíncrona.
+O sistema completo utiliza o modelo de comunicação publisher/subscriber, no qual cada nó tem uma função específica e interage de forma assíncrona, utilizando uma comunicação conhecida como DDS. DDS é um middleware padrão da OMG (Object Management Group) que o ROS 2 usa para permitir que os nós (processos) troquem dados de forma distribuída, escalável, em tempo real e de forma confiável.
 
-Nó	Função	Tipo	Tópico(s)	Relação com o Hardware	Relação com a Interface
-gas_mock	Simulação de sensores de gás	Publisher	gas/co2_ppm, gas/ch4_ppm	Futuro uso com sensores reais ligados ao Raspberry Pi	Interface exibe os valores
-user_controller	Controle dos motores	Subscriber	cmd_vel	Aciona motores via GPIO do Raspberry Pi	Recebe comandos de direção
-usbcam_node	Captura e envio de vídeo	Publisher	usbcam_node/compressed	Usa câmera conectada ao Raspberry Pi	Exibe vídeo ao usuário
-Conclusão
+`Nó	Função	Tipo	Tópico(s)	Relação com o Hardware	Relação com a Interface`
+
+O nó gas_mock é responsável pela simulação dos sensores de gás, publicando periodicamente dados fictícios de concentração de monóxido de carbono e metano nos tópicos gas/co2_ppm e gas/ch4_ppm. Esses valores simulam medições reais que futuramente serão obtidas a partir de sensores físicos conectados ao Raspberry Pi. A interface gráfica atua como assinante desses tópicos, recebendo as informações publicadas e exibindo os níveis de gás em tempo real para o usuário.
+
+O nó user_controller, por sua vez, é o componente encarregado do controle dos motores. Ele funciona como um subscriber, recebendo mensagens de velocidade linear e angular publicadas no tópico cmd_vel. A partir desses valores, o nó calcula a velocidade ideal para cada roda e envia comandos aos pinos GPIO do Raspberry Pi, acionando os motores de forma coordenada conforme as instruções recebidas da interface gráfica.
+
+Já o nó usbcam_node tem a função de capturar e transmitir vídeo em tempo real. Ele utiliza a câmera conectada ao Raspberry Pi — seja USB ou nativa — para capturar imagens, que são convertidas em mensagens compactadas e publicadas continuamente no tópico usbcam_node/compressed. A interface gráfica, ao se inscrever nesse tópico, exibe o vídeo em tempo real para o operador, possibilitando uma visualização direta do ambiente onde o robô está atuando.
+
+
+## Conclusão
 
 O desenvolvimento do NAVIQ demonstrou a capacidade do ROS 2 como plataforma de integração entre hardware e software em sistemas robóticos distribuídos.
 A arquitetura projetada possibilita o controle remoto, a visualização em tempo real e o monitoramento ambiental com base em sensores simulados e câmeras embarcadas.
